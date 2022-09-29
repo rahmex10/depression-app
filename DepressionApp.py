@@ -6,7 +6,7 @@ import pickle
 from PIL import Image
 import nltk
 
-#combined_data = pd.read_csv('combined_data.csv')
+combined_data = pd.read_csv('combined_data.csv')
 
 import string
 from nltk.corpus import stopwords
@@ -27,7 +27,7 @@ def text_process(mess):
     return [word for word in nopunc.split() if word.lower() not in stopwords.words('english')]
 
 #txtproc = pickle.load(open('text_process.pkl', 'rb'))
-combined_data = pickle.load(open('combined_data.pkl', 'rb')) 
+#combined_data = pickle.load(open('combined_data.pkl', 'rb')) 
 from sklearn.feature_extraction.text import CountVectorizer
 cv = CountVectorizer(analyzer= text_process).fit(combined_data['tweet'])
 
