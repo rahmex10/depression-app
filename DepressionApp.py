@@ -1,4 +1,4 @@
-%%writefile DepressionApp.py
+#%%writefile DepressionApp.py
 
 ######################
 # Import libraries
